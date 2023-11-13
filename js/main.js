@@ -17,13 +17,15 @@ ageUser = parseInt(ageUser);
 
 //PASSO 3: CALCOLO PREZZO BASE DEL BIGLIETTO//
 let priceBase = numberOfkilometres * 0.21;
+//PASS0 5: ARROTONDO IL NUMERO//
+console.log(priceBase.toFixed(2));
 //
-//PASSO 4: APLICO LO SCONTO ALLA BASE DELL'ETA//
+//PASSO 6: APLICO LO SCONTO ALLA BASE DELL'ETA//
 if (ageUser < 18) {
   priceBase * 0.2;
 } else if (ageUser >= 65) {
   priceBase * 0.4;
 }
-//PASS0 5: ARROTONDO IL NIMERO//
-let finalPrice = finalPrice.toFixed(2);
-//PASSO 6: 
+
+//PASSO 7: IL PREZZO FINALE//
+alert("prezzo finale è" + priceBase + " $");
