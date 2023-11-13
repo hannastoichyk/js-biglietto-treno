@@ -5,28 +5,25 @@ va applicato uno sconto del 20% per i minorenni
 va applicato uno sconto del 40% per gli over 65.*/
 
 // PASSO 1: CHIEDO ALL'UTENTE IL NUMERO DI CHILOMETRI E L'ETA//
-let numberOfkilometres=prompt("Numero dei chilometri");
-let ageUser=prompt("Quanti anni hai?");
+let numberOfkilometres = prompt("Numero dei chilometri");
+let ageUser = prompt("Quanti anni hai?");
 //PASSO 1A:VALIDO I MIEI DATI//
 if (isNaN(numberOfkilometres) || isNaN(ageUser)) {
-    alert("Mi dispiace non hai inserito entrambi dei numeri!")
-} ;
-  // PASSO 1b: converto i testi dell'età in numeri//
+  alert("Mi dispiace non hai inserito entrambi dei numeri!");
+}
+// PASSO 1b: converto i testi dell'età in numeri//
 numberOfkilometres = parseInt(numberOfkilometres);
- ageUser= parseInt(ageUser);
-
-
-
+ageUser = parseInt(ageUser);
 
 //PASSO 3: CALCOLO PREZZO BASE DEL BIGLIETTO//
-let priceBase= numberOfkilometres*0.21;
+let priceBase = numberOfkilometres * 0.21;
 //
-
-
-
-
-
-
-
-
-
+//PASSO 4: APLICO LO SCONTO ALLA BASE DELL'ETA//
+if (ageUser < 18) {
+  priceBase * 0.2;
+} else if (ageUser >= 65) {
+  priceBase * 0.4;
+}
+//PASS0 5: ARROTONDO IL NIMERO//
+let finalPrice = finalPrice.toFixed(2);
+//PASSO 6: 
