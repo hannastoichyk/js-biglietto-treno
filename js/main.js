@@ -20,12 +20,12 @@ let priceBase = numberOfkilometres * 0.21;
 
 //PASSO 4: APLICO LO SCONTO ALLA BASE DELL'ETA//
 if (ageUser < 18) {
-  priceBase = priceBase * 0.8;
+  priceBase -= priceBase * 0.2;
 } else if (ageUser >= 65) {
-  priceBase = priceBase * 0.6;
+  priceBase -= priceBase * 0.4;
 };
 //PASS0 5: ARROTONDO IL NUMERO//
 let priceFinal = priceBase.toFixed(2);
 
 //PASSO 7: IL PREZZO FINALE//
-alert("prezzo finale è" + priceFinal + " $");
+alert("prezzo finale è " + priceFinal + " $");
